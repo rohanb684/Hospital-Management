@@ -8,7 +8,7 @@ cloudinary.v2.config({
     api_secret: process.env.CLOUDINARY_API_SECRET
 })
 
-app.listen(process.env.PORT, async ()=>{
+app.listen(process.env.PORT || 3000, async ()=>{
     console.log(`Server listening on port ${process.env.PORT}`)
     await dbConnection();
 })
