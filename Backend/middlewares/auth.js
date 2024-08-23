@@ -25,6 +25,7 @@ export const adminAuth = async (req, res, next) =>{
 export const patientAuth = async (req, res, next) =>{
     try{
         const token = req.cookies.patientToken;
+        console.log(token);
     
         if(!token){
             return next(new ErrorHandler("User not logged in", 400))
